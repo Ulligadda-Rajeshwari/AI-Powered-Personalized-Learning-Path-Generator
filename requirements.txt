@@ -2,3 +2,4 @@ flask
 reportlab
 requests
 gunicorn
+scikit-learn
