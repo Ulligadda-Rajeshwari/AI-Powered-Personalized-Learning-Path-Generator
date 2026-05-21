@@ -1926,20 +1926,6 @@ if(progressData.status === "completed"){
       if(r.type === 'video') {
         btn.addEventListener('click', ()=>{
   // Helper function to extract YouTube video ID
-  function getYouTubeId(url) {
-    if (!url) return null;
-    let m;
-    m = url.match(/youtu\.be\/([^\?\&\/]+)/);
-    if (m && m[1]) return m[1];
-    m = url.match(/[?&]v=([^&]+)/);
-    if (m && m[1]) return m[1];
-    m = url.match(/\/embed\/([^\?\&\/]+)/);
-    if (m && m[1]) return m[1];
-    m = url.match(/([A-Za-z0-9_-]{11})/);
-    if (m && m[1]) return m[1];
-    return null;
-  }
-
   const vid = getYouTubeId(r.url);
   if (!vid) {
     window.open(r.url, '_blank');
